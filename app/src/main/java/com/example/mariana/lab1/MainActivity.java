@@ -25,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void showImages(View view) {
+        Intent intent = new Intent(this, ShowImages.class);
+        startActivity(intent);
+    }
+
     public void changeText(View view) {
         TextView edit = (TextView)findViewById(R.id.editView);
         edit.setText("Hello");
