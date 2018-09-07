@@ -1,7 +1,9 @@
 package com.example.marianaperez.exam1p;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -134,14 +136,17 @@ public class MainActivity extends AppCompatActivity {
         }
         if(Global.p2choice == 1 && Global.p1choice == 2) {
             Global.p1wins = Global.p1wins + 1;
+            vibrate();
             return 1;
         }
         if(Global.p2choice == 2 && Global.p1choice == 3) {
             Global.p1wins = Global.p1wins + 1;
+            vibrate();
             return 1;
         }
         if(Global.p2choice == 3 && Global.p1choice == 1) {
             Global.p1wins = Global.p1wins + 1;
+            vibrate();
             return 1;
         }
 
@@ -153,5 +158,11 @@ public class MainActivity extends AppCompatActivity {
         TextView p1wins = findViewById(R.id.p1wins);
         p2wins.setText(Integer.toString(Global.p2wins));
         p1wins.setText(Integer.toString(Global.p1wins));
+    }
+
+    public void vibrate() {
+        long pattern[]={0,200,100,300,400}; // or you can just set a duration also in ms
+        Vibrator vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
+        vibrator.vibrate(pattern, -1);
     }
 }
