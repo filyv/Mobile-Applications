@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/rockp1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="23dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="116dp"
+        android:text="Rock"
+        app:layout_constraintEnd_toStartOf="@+id/paperp1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/p1wins" />
+
+    <Button
+        android:id="@+id/paperp1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="19dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="19dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="231dp"
+        android:text="Paper"
+        app:layout_constraintEnd_toStartOf="@+id/scissorsp1"
+        app:layout_constraintStart_toEndOf="@+id/rockp1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/scissorsp1"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="116dp"
+        android:text="Scissors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/paperp1"
+        app:layout_constraintTop_toBottomOf="@+id/p2wins" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="56dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="64dp"
+        android:text="Player 1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/p2choice"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_marginTop="84dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/rockp1"
+        tools:layout_editor_absoluteX="67dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="165dp"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="64dp"
+        android:text="Player 2"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/p1wins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="96dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/p2wins"
+        android:layout_width="8dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="204dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="12dp"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/p1wins"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="148dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="31dp"
+        android:text="Reset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/p2choice" />
+
+</android.support.constraint.ConstraintLayout>
