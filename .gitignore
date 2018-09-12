@@ -7,4 +7,5 @@
 .DS_Store
 /build
 /captures
+/Lab4/node_modules
 .externalNativeBuild
