@@ -1,0 +1,16 @@
+<ion-view title="Page" id="page1">
+  <ion-content padding="true" class="has-header">
+    <h1 id="page-heading1" style="color:#000000;">Lab</h1>
+    <form id="page-form2" class="list">
+      <label class="item item-input" id="page-input2">
+        <span class="input-label">Input</span>
+        <input type="text" placeholder="Insert City" ng-model="mdl.inputtxt">
+      </label>
+    </form>
+    <div id="page-markdown1" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">Click to know the weather</p>
+    </div>
+    <a ui-sref="page2({inputtxt: mdl.inputtxt})" id="page-button1" class="button button-positive button-block">Submit</a>
+    <p> The value of your text is {{ mdl.inputtxt }} </p>
+  </ion-content>
+</ion-view>
