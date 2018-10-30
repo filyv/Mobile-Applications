@@ -1,0 +1,13 @@
+<ion-view title="Page" id="page1">
+  <ion-content padding="true" class="has-header">
+    <h1 id="page-heading1" style="color:#000000;">Exam</h1>
+    <form id="page-form4" class="list">
+      <ion-radio id="page-radio1" value="AAPL" ng-model="mdl.inputradio">Apple</ion-radio>
+      <ion-radio id="page-radio2" value="GE" ng-model="mdl.inputradio">General Electric</ion-radio>
+      <ion-radio id="page-radio4" value="SBUX" ng-model="mdl.inputradio">Starbucks</ion-radio>
+      <ion-radio id="page-radio3" value="WBA" ng-model="mdl.inputradio">Wallgreens</ion-radio>
+    </form>
+    <a ui-sref="page2({inputradio: mdl.inputradio})" id="page-button1" class="button button-positive button-block">Submit</a>
+    <p> The value of your radio is {{ mdl.inputradio }}</p>
+  </ion-content>
+</ion-view>
